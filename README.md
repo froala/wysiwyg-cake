@@ -1,11 +1,10 @@
-# Froala plugin for CakePHP
+# Froala WYSIWYG Editor Plugin for CakePHP
 
-## Installation
+## About
 
-You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
+The purpose of placing <a href="https://www.froala.com/wysiwyg-editor"/>Froala WYSIWYG Editor</a> in a plugin is to keep it separate from a themed view, the regular webroot or the app in general, which makes it easier to update and overall follows the idea of keeping the code clean and modular.
 
-The recommended way to install composer packages is:
 
-```
-composer require your-name-here/Froala
-```
+
+
+
