@@ -1,0 +1,54 @@
+{
+    "name": "wysiwyg/Froala",
+    "description": "A beautiful jQuery WYSIWYG text editor based on HTML5 technology. Cross browser, with mobile support, high performance and Retina Ready modern design.",
+    "type": "cakephp-plugin",
+    "keywords": [
+        "froala",
+        "froala cake php 3",
+        "html",
+        "text",
+        "editor",
+        "wysiwyg",
+        "jquery-plugin",
+        "rich editor",
+        "rich text editor",
+        "rte",
+        "javascript",
+        "jquery"
+    ],
+    "homepage": "https://www.froala.com/wysiwyg-editor",
+    "license": [
+        "One Website",
+        "Advanced",
+        "OEM"
+    ],
+    "authors": [
+      {
+        "name": "Froala Labs",
+        "role": "Maintainer"
+      }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "cakephp/cakephp": ">=3.3.2 <4.0.0",
+        "fontawsome/font-awesome": ">=4.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Froala\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Froala\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    },
+    "support": {
+      "issues": "-",
+      "source": "https://www.froala.com/wysiwyg-editor"
+    }
+}
