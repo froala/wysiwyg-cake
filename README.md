@@ -93,9 +93,7 @@ Example of init using array of options
 // '#comment'  Represents the html element selector.
 // 'array()'   Represents the list of options that are passed to the editor.
 
-$this->Froala->editor('#comment', array('colorsBackground' => ['#61BD6D', '#1ABC9C', '#54ACD2', 'REMOVE'],
-                                         'colorsText'       => ['#61BD6D', '#1ABC9C', '#54ACD2', 'REMOVE']
-                                        ));
+$this->Froala->editor('#comment', array('minHeight => '200px', 'maxHeight' => '400px'));
                   
 ```
 
