@@ -22,7 +22,6 @@ The Froala helper is basically just a convenience helper that allows you to use 
 
 ```php
 // Loads Froala Editor javascript also will load all the plugins and css for the plugins
-
 <?= $this->Froala->plugin();?>
 
 // Will target one specific html selector on which the editor will be init.
@@ -50,9 +49,12 @@ Wherever you want to use it, load it in the controller
 ```php
 class AppController extends Controller
 {
-.
-.
+	...
+	
 	public $helpers = array('Froala.Froala');
+	
+	...
+}
 ```
 
 In the view simply use the plugin() method so all the dependencies are loaded, and editor() method which you can pass options as key/value pairs in an array or object.
@@ -77,8 +79,7 @@ If you want a quick way to configure default values for all the Froala Editors o
 Here is an example of a line you could have in `bootstrap.php`:
 
 ```php
-Configure::write('Froala.editorOptions', array('height' => '300px',
-                        'lineBreakerTags'=> ['table', 'hr', 'form']));
+Configure::write('Froala.editorOptions', array('height' => '300px'));
 ```
 
 It will make all editors to have a 300px height and apply line braker tags. You may want to override this value for a single editor. To do so, just pass the option to the editor() method and it will override the default value.
@@ -92,88 +93,13 @@ Example of init using array of options
 // '#comment'  Represents the html element selector.
 // 'array()'   Represents the list of options that are passed to the editor.
 
-$this->Froala->editor('#comment',array('colorsBackground' => ['#61BD6D', '#1ABC9C', '#54ACD2', 'REMOVE'],
+$this->Froala->editor('#comment', array('colorsBackground' => ['#61BD6D', '#1ABC9C', '#54ACD2', 'REMOVE'],
                                          'colorsText'       => ['#61BD6D', '#1ABC9C', '#54ACD2', 'REMOVE']
                                         ));
                   
 ```
 
-Example of RTL LTR Direction Buttons:
 
-```php
-
-// '#comment'  Represents the html element selector.
-// 'array()'   Represents the list of options that are passed to the editor.
-
-$this->Froala->editor('#comment',array('colorsBackground'=> ['#61BD6D', '#1ABC9C', '#54ACD2', 'REMOVE'],
-                                         'direction' =>'rtl'
-                                         ));
-                                         
-```
-Example of limiting the Html tags and removing unwanted tags:
-
-```php
-
-// '#comment'  Represents the html element selector.
-// 'array()'   Represents the list of options that are passed to the editor.
-
-$this->Froala->editor('#comment',array('htmlAllowedTags' => ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
-	                                     'htmlRemoveTags'  => ['script', 'style', 'base']
-                                         ));
-
-```
-Example of setting the toolbar buttons and toolbar position:
-
-```php
-
-// '#comment'  Represents the html element selector.
-// 'array()'   Represents the list of options that are passed to the editor.
-
-$this->Froala->editor('#comment',array('toolbarButtons' => ['bold', 'italic', 'underline'],
-                                         'toolbarBottom' => true
-                                         ));
-
-```
-
-Example of code beautifier passing options as object:
-
-```php
-// '#comment'  Represents the html element selector.
-// '(object)'   Represents the list of options that are passed to the editor.
-
-
-$this->Froala->editor'#comment',(object)  ['codeBeautifierOptions' =>[
-                                              'end_with_newline' => true,
-                                              'indent_inner_html'=> true,
-                                              'extra_liners' =>['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'pre', 'ul', 'ol', 'table', 'dl'],
-                                              'brace_style' =>'expand',
-                                              'indent_char' => ' ',
-                                              'indent_size' => '4',
-                                              'wrap_line_length'=> '0'
-                                              ],]);
-
-```
-
-Example of using the editor in inline mode and allowing only some types of images: 
-
-```php 
-
-$this->Froala->editor('#comment',array('imageAllowedTypes' => ['jpeg', 'jpg', 'png'],
-                                         'toolbarInline' => true
-                                         ));
-
-```
-
-
-Example of using the tolbar sticky and setting an offeset for it:
-
-```php 
-
-$this->Froala->editor('#comment',array('toolbarSticky' => true,
-                                         'toolbarStickyOffset' => '50'
-                                         ));
-
-```
 
 ## Requirements
 
