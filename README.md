@@ -1,6 +1,8 @@
 # Froala WYSIWYG Editor Plugin for CakePHP 3
 
->CakePHP Plugin for Froala Javascript WYSIWYG Text Editor. For cake >=3.0 <4.0.0
+> CakePHP Plugin for Froala Javascript WYSIWYG Text Editor. For CakePHP >=3.0.
+
+> See [froala/wysiwyg-cake](https://github.com/froala/wysiwyg-cake) for CakePHP version 2.
 
 ## About
 The purpose of placing [Froala WYSIWYG Editor](https://www.froala.com/wysiwyg-editor) in a plugin is to keep it separate from a themed view, the regular webroot or the app in general, which makes it easier to update and overall follows the idea of keeping the code clean and modular.
