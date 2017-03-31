@@ -1,5 +1,5 @@
 {
-    "name": "froala/froala-wysiwyg-cakephp",
+    "name": "froala/cakephp-froala-wysiwyg",
     "description": "A beautiful jQuery WYSIWYG text editor based on HTML5 technology. Cross browser, with mobile support, high performance and Retina Ready modern design.",
     "type": "cakephp-plugin",
     "keywords": [
