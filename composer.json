@@ -49,7 +49,7 @@
         }
     },
     "support": {
-      "issues": "-",
+      "issues": "https://github.com/froala/wysiwyg-cake/issues",
       "source": "https://www.froala.com/wysiwyg-editor"
     }
 }
