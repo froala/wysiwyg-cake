@@ -32,7 +32,7 @@
     "require": {
         "php": ">=5.5.9",
         "cakephp/cakephp": ">=3.3.2 <4.0.0",
-        "fontawsome/font-awesome": ">=4.4.0"
+        "fortawesome/font-awesome": ">=4.4.0"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
