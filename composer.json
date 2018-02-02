@@ -18,11 +18,7 @@
         "wysiwyg editor"
     ],
     "homepage": "https://www.froala.com/wysiwyg-editor",
-    "license": [
-        "Hobby",
-        "Professional",
-        "Business"
-    ],
+    "license": "proprietary",
     "authors": [
       {
         "name": "Froala Labs",
