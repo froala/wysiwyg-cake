@@ -27,9 +27,12 @@ Alternatively, you can download an archive from the [master branch on Github](ht
 
 Make sure that you load the plugin routes by adding to your bootstrap file: 
 
-Plugin::loadAll(); or  Plugin::load('Froala');
+`Plugin::loadAll();` or  `Plugin::load('Froala');`
 This will load all plugins at once or only the Froala plugin.
 
+This can be done automatically bu Cake
+
+    bin/cake plugin load Froala
 
 ## Usage
 The Froala helper is basically just a convenience helper that allows you to use php and CakePHP conventions to generate the configuration for Froala and as an extra it allows you to load configs.
