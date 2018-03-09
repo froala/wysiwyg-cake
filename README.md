@@ -33,11 +33,22 @@ The Froala helper is basically just a convenience helper that allows you to use 
 ```php
 // Loads Froala Editor javascript also will load all the plugins and css for the plugins
 <?= $this->Froala->plugin();?>
+// You can provide common options for CakePHP HtmlHelper script() and css() methods in first parameter
+// Or specific options for script() (2nd argument) or css() (3rd argument)
+<?= $this->Froala->plugin(array('block' => 'bottom'), array('specificJsOpton' => 'someValue'), array('specificCssOpton' => 'someValue') );?>
 
 // Will target one specific html selector on which the editor will be init.
-// Second paramenter is mix can be array/object of options that the Froala Editor will take.
+// Second paramenter is mix can be array/object of options that the Froala Editor will take
+// Third parameter is array of options for CakePHP HtmlHelper::scriptBlock() method
+<?= $this->Froala->editor('#froala', array('option' => value), array('block' => 'bottom') );?>
 
-<?= $this->Froala->editor('#froala', array('option' => value));?>
+// Third parameter can be false to return script line without <script></script> block
+// So you can output in in your custom script block
+<script>
+    window.onload = function(){
+		<?= $this->Froala->editor('#froala', array('option' => value), false);?>
+	};
+</script>
 ```
 
 If your app is not set up to work in the top level of your host / but instead in /yourapp/ the automatic inclusion of the script wont work. You'll manually have to add the js file to your app inisde the helper class. 
