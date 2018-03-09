@@ -19,6 +19,10 @@ Or if your CakePHP application is setup as a git repository, you can add it as a
 
 	git submodule add git://github.com/froala/wysiwyg-cake.git Plugin/Froala
 
+Or using Composer:
+
+    php ./composer.phar require froala/wysiwyg-cake
+
 Alternatively, you can download an archive from the [master branch on Github](https://github.com/froala/wysiwyg-cake/archive/master.zip) and extract the contents to `Froala plugin`.
 
 Make sure that you load the plugin routes by adding to your bootstrap file: 
