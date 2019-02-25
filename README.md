@@ -44,16 +44,6 @@ The Froala helper is basically just a convenience helper that allows you to use 
 <?= $this->Froala->editor('#froala', array('option' => value));?>
 ```
 
-Include froala editor css and js files in view template 
-Copy the froala_editor.min.js and froala_editor.min.css files from vendor/froala/wyiwyg-cake/webroot
-and paste it in webroot folder of your application.
-js and css files should be in corresponding folders.
-
-Include the below lines in your template page
-```php
-$this->Html->css('froala_editor.min.css');
-$this->Html->script('froala_editor.min.js');
-```
 
 ## How to use the helper
 
@@ -83,7 +73,7 @@ add
 ```
 
 This is a simple init example with no options for the Froala Editor.
-Check under examples more specific init methods.
+Include the below statement in your view template to integrate the plugins in your editor
 
 ```php
 $this->Froala->plugin();
