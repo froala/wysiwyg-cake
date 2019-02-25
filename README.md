@@ -19,9 +19,13 @@ Or if your CakePHP application is setup as a git repository, you can add it as a
 
 	git submodule add git://github.com/froala/wysiwyg-cake.git Plugin/Froala
 
+Or
+	open terminal/command prompt (windows)
+	type composer require froala/wysiwyg-cake enter
+
 Alternatively, you can download an archive from the [master branch on Github](https://github.com/froala/wysiwyg-cake/archive/master.zip) and extract the contents to `Froala plugin`.
 
-Make sure that you load the plugin routes by adding to your bootstrap file: 
+Make sure that you load the plugin routes by adding to your bootstrap file(bootstrap.php) in config folder: 
 
 Plugin::loadAll(); or  Plugin::load('Froala');
 This will load all plugins at once or only the Froala plugin.
@@ -40,12 +44,15 @@ The Froala helper is basically just a convenience helper that allows you to use 
 <?= $this->Froala->editor('#froala', array('option' => value));?>
 ```
 
-If your app is not set up to work in the top level of your host / but instead in /yourapp/ the automatic inclusion of the script wont work. You'll manually have to add the js file to your app inisde the helper class. 
+Include froala editor css and js files in view template 
+Copy the froala_editor.min.js and froala_editor.min.css files from vendor/froala/wyiwyg-cake/webroot
+and paste it in webroot folder of your application.
+js and css files should be in corresponding folders.
 
-
+Include the below lines in your template page
 ```php
-$this->Html->css('/yourapp/Froala/css/froala_editor.min.css');
-$this->Html->script('/yourapp/Froala/js/froala_editor.min.js');
+$this->Html->css('froala_editor.min.css');
+$this->Html->script('froala_editor.min.js');
 ```
 
 ## How to use the helper
@@ -55,6 +62,9 @@ edit `app/Config/bootstrap.php` and add the line `CakePlugin::load('Froala');` a
 bottom. If you already have `CakePlugin::loadAll();` to auto-load all plugins then you may skip this step.
 
 Wherever you want to use it, load it in the controller
+
+open AppController.php (your project/src/controller/AppController)
+Declare variable public $helpers = array('Froala.Froala');
 
 ```php
 class AppController extends Controller
@@ -66,8 +76,11 @@ class AppController extends Controller
 	...
 }
 ```
-
-In the view simply use the plugin() method so all the dependencies are loaded, and editor() method which you can pass options as key/value pairs in an array or object.
+In the view page (template) 
+add 
+```php
+<?= $this->Froala->editor('#froala-editor'');?>
+```
 
 This is a simple init example with no options for the Froala Editor.
 Check under examples more specific init methods.
