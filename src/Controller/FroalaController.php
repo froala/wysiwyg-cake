@@ -1,7 +1,7 @@
 <?php
 namespace Froala\Controller;
 
-use App\Controller\AppController;
+use Cake\Controller\Controller;
 
 class FroalaController extends Controller
 {
