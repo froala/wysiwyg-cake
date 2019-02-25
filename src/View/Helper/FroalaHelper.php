@@ -25,10 +25,12 @@ class FroalaHelper extends Helper
 	 * Adds a new editor to the script block on the page
 	 *
 	 * @see http://editor.froala.com/docs/options for a list of keys
-	 * @param mixed
+	 * @param mixed $selector
+	 * @param mixed $options
+	 * @param mixed $scriptBlockOptions Options array for HtmlHelper::scriptBlock() of false for return without block at all
 	 * @return void
 	 */
-	public function editor($selector = null, $options = null) {
+	public function editor($selector = null, $options = null, $scriptBlockOptions = []) {
 
 		$configs = Configure::read('Froala.editorOptions');
 		if (!empty($configs) && is_array($configs)) {
@@ -45,15 +47,23 @@ class FroalaHelper extends Helper
 			$options = '{}';
 		}
 
-		echo $this->Html->scriptBlock('$(function() {$("' . $selector . '").froalaEditor(' . "\n" . $options . "\n" . ');})' . "\n");
+		$script_str = '$(function() {$("' . $selector . '").froalaEditor(' . "\n" . $options . "\n" . ');})' . "\n";
+        
+        echo is_array($scriptBlockOptions) ? $this->Html->scriptBlock($script_str, $scriptBlockOptions) : $script_str;
 	}
 
 
 	/**
 	 * Loads up all the plugins and css for plugins upon calling.
+	 * @param   array   $common_options Common options for HtmlHelper script() and css() methods
+	 * @param   array   $js_options     Specific options for HtmlHelper::script() method
+	 * @param   array   $css_options    Specific options for HtmlHelper::css() method
+	 *
 	 *
 	 */
-	public function plugin() {
+	public function plugin($common_options = array(), $js_options = array(), $css_options = array()) {
+		$js_options = array_merge(array('toolbarInline' => false), $common_options, $js_options);
+		$css_options = array_merge(array('toolbarInline' => false), $common_options, $css_options);
 
 		echo $this->Html->script(array(
 			'/Froala/js/froala_editor.min.js',
@@ -90,7 +100,7 @@ class FroalaHelper extends Helper
 			'/Froala/js/plugins/url.min.js',
 			'/Froala/js/plugins/video.min.js',
 			'/Froala/js/plugins/word_paste.min.js'
-			), array('toolbarInline' => false));
+			), $js_options);
 		echo $this->Html->css(array(
 				'/Froala/css/froala_editor.min.css',
 				'/Froala/css/froala_style.min.css',
@@ -112,7 +122,7 @@ class FroalaHelper extends Helper
 				'/Froala/css/plugins/table.min.css',
 				'/Froala/css/plugins/video.min.css',
 				'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
-			)
+			), $css_options
 		);
 	}
 
