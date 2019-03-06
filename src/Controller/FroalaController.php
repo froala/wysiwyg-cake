@@ -1,5 +1,5 @@
 <?php
-namespace App\Controller;
+namespace Froala\Controller;
 
 use App\Controller\AppController;
 
