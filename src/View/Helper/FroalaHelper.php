@@ -47,7 +47,7 @@ class FroalaHelper extends Helper
 			$options = '{}';
 		}
 
-		$script_str = 'new FroalaEditor("' . $selector . '","' . $options . '")';  
+		$script_str = 'new FroalaEditor("' . $selector . '",'.$options.');';  
             
         echo is_array($scriptBlockOptions) ? $this->Html->scriptBlock($script_str, $scriptBlockOptions) : $script_str;
 	}
