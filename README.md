@@ -117,22 +117,6 @@ $this->Froala->editor('#comment', array('minHeight => '200px', 'maxHeight' => '4
 * PHP version: PHP 5.2+
 * jQuery javascript library <http://jquery.com/>
 
-## Dependency Note
-
-This plugin depends on jQuery (<http://jquery.com>) so you would need to ensure that it is loaded in your layout or the
-view in which you want to display your editor. An example of how to load jQuery in your layout is shown below:
-
-
-```php
-
-<?= $this->Html->script(array('http://code.jquery.com/jquery-1.11.0.min.js')); ?>
-
-<?= $this->fetch('script'); ?>
-
-```
-
-Of course, you can also use a copy of the jQuery library from your app/webroot/js folder.
-
 ## License
 
 The `CakePHP Froala WYSIWYG Editor` project is under MIT license. However, in order to use WordPress Froala WYSIWYG Editor plugin you should purchase a license for it.

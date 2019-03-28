@@ -119,8 +119,7 @@ class FroalaHelper extends Helper
 				'/Froala/css/plugins/special_characters.min.css',
         '/Froala/css/third_party/spell_checker.min.css',
 				'/Froala/css/plugins/table.min.css',
-				'/Froala/css/plugins/video.min.css',
-				'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+				'/Froala/css/plugins/video.min.css'
 			), $css_options
 		);
 	}
