@@ -115,7 +115,6 @@ $this->Froala->editor('#comment', array('minHeight => '200px', 'maxHeight' => '4
 ## Requirements
 
 * PHP version: PHP 5.2+
-* jQuery javascript library <http://jquery.com/>
 
 ## License
 
