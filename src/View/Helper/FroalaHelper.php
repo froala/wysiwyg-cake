@@ -47,8 +47,8 @@ class FroalaHelper extends Helper
 			$options = '{}';
 		}
 
-		$script_str = '$(function() {$("' . $selector . '").froalaEditor(' . "\n" . $options . "\n" . ');})' . "\n";
-        
+		$script_str = 'new FroalaEditor("' . $selector . '",'.$options.');';  
+            
         echo is_array($scriptBlockOptions) ? $this->Html->scriptBlock($script_str, $scriptBlockOptions) : $script_str;
 	}
 
@@ -82,8 +82,7 @@ class FroalaHelper extends Helper
 			'/Froala/js/plugins/fullscreen.min.js',
 			'/Froala/js/plugins/help.min.js',
 			'/Froala/js/plugins/image.min.js',
-      '/Froala/js/third_party/image_aviary.min.js',
-			'/Froala/js/plugins/image_manager.min.js',
+      '/Froala/js/plugins/image_manager.min.js',
 			'/Froala/js/plugins/inline_style.min.js',
 			'/Froala/js/plugins/line_breaker.min.js',
 			'/Froala/js/plugins/link.min.js',
@@ -120,8 +119,7 @@ class FroalaHelper extends Helper
 				'/Froala/css/plugins/special_characters.min.css',
         '/Froala/css/third_party/spell_checker.min.css',
 				'/Froala/css/plugins/table.min.css',
-				'/Froala/css/plugins/video.min.css',
-				'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+				'/Froala/css/plugins/video.min.css'
 			), $css_options
 		);
 	}

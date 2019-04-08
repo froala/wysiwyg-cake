@@ -1,6 +1,6 @@
 {
     "name": "froala/wysiwyg-cake",
-    "description": "A beautiful jQuery WYSIWYG text editor based on HTML5 technology. Cross browser, with mobile support, high performance and Retina Ready modern design.",
+    "description": "A beautiful WYSIWYG text editor based on HTML5 technology. Cross browser, with mobile support, high performance and Retina Ready modern design.",
     "type": "cakephp-plugin",
     "keywords": [
         "froala",
@@ -9,12 +9,10 @@
         "text",
         "editor",
         "wysiwyg",
-        "jquery-plugin",
         "rich editor",
         "rich text editor",
         "rte",
         "javascript",
-        "jquery",
         "wysiwyg editor"
     ],
     "homepage": "https://www.froala.com/wysiwyg-editor",
