@@ -93,7 +93,8 @@ class FroalaHelper extends Helper
 			'/Froala/js/plugins/quick_insert.min.js',
 			'/Froala/js/plugins/quote.min.js',
 			'/Froala/js/plugins/special_characters.min.js',
-      '/Froala/js/third_party/spell_checker.min.js',
+			'/Froala/js/third_party/spell_checker.min.js',
+			'/Froala/js/third_party/font_awesome.min.js',
 			'/Froala/js/plugins/save.min.js',
 			'/Froala/js/plugins/table.min.js',
 			'/Froala/js/plugins/url.min.js',
@@ -117,9 +118,11 @@ class FroalaHelper extends Helper
 				'/Froala/css/plugins/line_breaker.min.css',
 				'/Froala/css/plugins/quick_insert.min.css',
 				'/Froala/css/plugins/special_characters.min.css',
-        '/Froala/css/third_party/spell_checker.min.css',
+				'/Froala/css/third_party/spell_checker.min.css',
+				'/Froala/css/third_party/font_awesome.min.css',
 				'/Froala/css/plugins/table.min.css',
-				'/Froala/css/plugins/video.min.css'
+				'/Froala/css/plugins/video.min.css',
+				'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
 			), $css_options
 		);
 	}
