@@ -21,7 +21,9 @@ Or if your CakePHP application is setup as a git repository, you can add it as a
 
 Or
 	open terminal/command prompt (windows)
-	type composer require froala/wysiwyg-cake
+	type 
+    
+    composer require froala/wysiwyg-cake
 
 Alternatively, you can download an archive from the [master branch on Github](https://github.com/froala/wysiwyg-cake/archive/master.zip) and extract the contents to `Froala plugin`.
 
@@ -69,18 +71,10 @@ class AppController extends Controller
 In the view page (template) 
 add 
 ```php
+<?= $this->Froala->plugin() ?>
 <?= $this->Froala->editor('#froala-editor'');?>
 ```
 
-This is a simple init example with no options for the Froala Editor.
-Include the below statement in your view template to integrate the plugins in your editor
-
-```php
-$this->Froala->plugin();
-$this->Froala->editor('selector');
-```
-
-This will instruct Froala to convert the matched element on the page to Froala editor.
 
 A complete list of [Froala configuration options](https://www.froala.com/wysiwyg-editor/docs/options) are on the website.
 
