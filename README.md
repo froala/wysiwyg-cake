@@ -70,6 +70,10 @@ class AppController extends Controller
 ```
 In the view page (template) 
 add 
+```
+<div id="froala-editor" class="row">
+</div>
+```
 ```php
 <?= $this->Froala->plugin() ?>
 <?= $this->Froala->editor('#froala-editor'');?>
