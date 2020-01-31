@@ -11,16 +11,9 @@
 The purpose of placing [Froala WYSIWYG Editor](https://www.froala.com/wysiwyg-editor) in a plugin is to keep it separate from a themed view, the regular webroot or the app in general, which makes it easier to update and overall follows the idea of keeping the code clean and modular.
 
 ## Installation
-To use Froala WYSIWYG Editor you need to clone git repository inside the folder`vendor` :
+To use Froala WYSIWYG Editor you need to 
 
-	git clone git://github.com/froala/wysiwyg-cake.git Froala/wysiwyg-cake
-
-Or if your CakePHP application is setup as a git repository, you can add it as a submodule:
-
-	git submodule add git://github.com/froala/wysiwyg-cake.git Froala/wysiwyg-cake
-
-Or
-	open terminal/command prompt (windows)
+Open terminal/command prompt (windows)
 	type 
     
     composer require froala/wysiwyg-cake
