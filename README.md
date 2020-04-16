@@ -50,7 +50,7 @@ The Froala helper is basically just a convenience helper that allows you to use 
 <?= $this->Froala->editor('#froala', array('option' => value));?>
 ```
 
-If you need to load the plugins, please include the respective `js` and `css` files in the file `Froala/View/Helper/FroalaHelper.php` as shown below:
+If you need to load the plugins, then include in the file `FroalaHelper.php`:
 
 ```php
 $this->Html->script(array(
@@ -61,7 +61,6 @@ $this->Html->script(array(
 	'/Froala/js/plugins/code_view.min.js',
 	'/Froala/js/plugins/colors.min.js',
 	'/Froala/js/plugins/draggable.min.js',
-'/Froala/js/third_party/embedly.min.js',
 	'/Froala/js/plugins/emoticons.min.js',
 	'/Froala/js/plugins/entities.min.js',
 	'/Froala/js/plugins/file.min.js',
@@ -70,7 +69,6 @@ $this->Html->script(array(
 	'/Froala/js/plugins/fullscreen.min.js',
 	'/Froala/js/plugins/help.min.js',
 	'/Froala/js/plugins/image.min.js',
-'/Froala/js/third_party/image_aviary.min.js',
 	'/Froala/js/plugins/image_manager.min.js',
 	'/Froala/js/plugins/inline_style.min.js',
 	'/Froala/js/plugins/line_breaker.min.js',
@@ -82,12 +80,14 @@ $this->Html->script(array(
 	'/Froala/js/plugins/quick_insert.min.js',
 	'/Froala/js/plugins/quote.min.js',
 	'/Froala/js/plugins/special_characters.min.js',
-'/Froala/js/third_party/spell_checker.min.js',
 	'/Froala/js/plugins/save.min.js',
 	'/Froala/js/plugins/table.min.js',
 	'/Froala/js/plugins/url.min.js',
 	'/Froala/js/plugins/video.min.js',
-	'/Froala/js/plugins/word_paste.min.js'
+	'/Froala/js/plugins/word_paste.min.js',
+	'/Froala/js/third_party/image_aviary.min.js',
+	'/Froala/js/third_party/embedly.min.js',
+	'/Froala/js/third_party/spell_checker.min.js'
 	), $js_options);
 $this->Html->css(array(
 		'/Froala/css/froala_editor.min.css',
@@ -96,7 +96,6 @@ $this->Html->css(array(
 		'/Froala/css/plugins/code_view.min.css',
 		'/Froala/css/plugins/colors.min.css',
 		'/Froala/css/plugins/draggable.min.css',
-'/Froala/css/third_party/embedly.min.css',
 		'/Froala/css/plugins/emoticons.min.css',
 		'/Froala/css/plugins/file.min.css',
 		'/Froala/css/plugins/fullscreen.min.css',
@@ -106,9 +105,11 @@ $this->Html->css(array(
 		'/Froala/css/plugins/line_breaker.min.css',
 		'/Froala/css/plugins/quick_insert.min.css',
 		'/Froala/css/plugins/special_characters.min.css',
-'/Froala/css/third_party/spell_checker.min.css',
 		'/Froala/css/plugins/table.min.css',
 		'/Froala/css/plugins/video.min.css',
+		'/Froala/css/third_party/embedly.min.css',
+		'/Froala/css/third_party/spell_checker.min.css',
+
 		'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
 	), $css_options
 );
