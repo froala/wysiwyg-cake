@@ -19,16 +19,15 @@ Or if your CakePHP application is setup as a git repository, you can add it as a
 
 	git submodule add git://github.com/froala/wysiwyg-cake.git Plugin/Froala
 
-Or
- 	Add:
+Or add:
 
-         	"froala/wysiwyg-cake": "^2.9"
+        "froala/wysiwyg-cake": "^2.9"
 
-	to the require section of your composer.json file.
+to the require section of your composer.json file.
 
-	or use [composer](https://getcomposer.org/download/) :
+or use [composer](https://getcomposer.org/download/) :
 
-    		php ./composer.phar require froala/wysiwyg-cake
+    	php ./composer.phar require froala/wysiwyg-cake
 
 Alternatively, you can download an archive from the [master branch on Github](https://github.com/froala/wysiwyg-cake/archive/master.zip) and extract the contents to `Plugin/Froala`.
 
