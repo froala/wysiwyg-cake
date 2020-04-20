@@ -19,11 +19,17 @@ Or if your CakePHP application is setup as a git repository, you can add it as a
 
 	git submodule add git://github.com/froala/wysiwyg-cake.git Plugin/Froala
 
-Or
-	open terminal/command prompt (windows)
-	type composer require froala/wysiwyg-cake
+Or add:
 
-Alternatively, you can download an archive from the [master branch on Github](https://github.com/froala/wysiwyg-cake/archive/master.zip) and extract the contents to `Froala plugin`.
+        "froala/wysiwyg-cake": "^2.9"
+
+to the require section of your composer.json file.
+
+or use [composer](https://getcomposer.org/download/) :
+
+    	php ./composer.phar require froala/wysiwyg-cake
+
+Alternatively, you can download an archive from the [master branch on Github](https://github.com/froala/wysiwyg-cake/archive/master.zip) and extract the contents to `Plugin/Froala`.
 
 Make sure that you load the plugin routes by adding to your bootstrap file(bootstrap.php) in config folder: 
 
@@ -44,6 +50,76 @@ The Froala helper is basically just a convenience helper that allows you to use 
 <?= $this->Froala->editor('#froala', array('option' => value));?>
 ```
 
+If you need to load the plugins, then include in the file `FroalaHelper.php`:
+
+```php
+$this->Html->script(array(
+      '/Froala/js/froala_editor.min.js',
+      '/Froala/js/plugins/align.min.js',
+      '/Froala/js/plugins/char_counter.min.js',
+      '/Froala/js/plugins/code_beautifier.min.js',
+      '/Froala/js/plugins/code_view.min.js',
+      '/Froala/js/plugins/colors.min.js',
+      '/Froala/js/plugins/draggable.min.js',
+      '/Froala/js/plugins/emoticons.min.js',
+      '/Froala/js/plugins/entities.min.js',
+      '/Froala/js/plugins/file.min.js',
+      '/Froala/js/plugins/font_family.min.js',
+      '/Froala/js/plugins/font_size.min.js',
+      '/Froala/js/plugins/fullscreen.min.js',
+      '/Froala/js/plugins/help.min.js',
+      '/Froala/js/plugins/image.min.js',
+      '/Froala/js/plugins/image_manager.min.js',
+      '/Froala/js/plugins/inline_style.min.js',
+      '/Froala/js/plugins/line_breaker.min.js',
+      '/Froala/js/plugins/link.min.js',
+      '/Froala/js/plugins/lists.min.js',
+      '/Froala/js/plugins/paragraph_format.min.js',
+      '/Froala/js/plugins/paragraph_style.min.js',
+      '/Froala/js/plugins/print.min.js',
+      '/Froala/js/plugins/quick_insert.min.js',
+      '/Froala/js/plugins/quote.min.js',
+      '/Froala/js/plugins/special_characters.min.js',
+      '/Froala/js/plugins/save.min.js',
+      '/Froala/js/plugins/table.min.js',
+      '/Froala/js/plugins/url.min.js',
+      '/Froala/js/plugins/video.min.js',
+      '/Froala/js/plugins/word_paste.min.js',
+      '/Froala/js/third_party/image_aviary.min.js',
+      '/Froala/js/third_party/embedly.min.js',
+      '/Froala/js/third_party/spell_checker.min.js',
+      '/Froala/js/third_party/image_tui.min.js',
+      '/Froala/js/third_party/font_awesome.min.js'
+   ), $js_options);
+
+
+$this->Html->css(array(
+      '/Froala/css/froala_editor.min.css',
+      '/Froala/css/froala_style.min.css',
+      '/Froala/css/plugins/char_counter.min.css',
+      '/Froala/css/plugins/code_view.min.css',
+      '/Froala/css/plugins/colors.min.css',
+      '/Froala/css/plugins/draggable.min.css',
+      '/Froala/css/plugins/emoticons.min.css',
+      '/Froala/css/plugins/file.min.css',
+      '/Froala/css/plugins/fullscreen.min.css',
+      '/Froala/css/plugins/help.min.css',
+      '/Froala/css/plugins/image_manager.min.css',
+      '/Froala/css/plugins/image.min.css',
+      '/Froala/css/plugins/line_breaker.min.css',
+      '/Froala/css/plugins/quick_insert.min.css',
+      '/Froala/css/plugins/special_characters.min.css',
+      '/Froala/css/plugins/table.min.css',
+      '/Froala/css/plugins/video.min.css',
+      '/Froala/css/third_party/embedly.min.css',
+      '/Froala/css/third_party/spell_checker.min.css',
+      '/Froala/css/third_party/image_tui.min.css',
+      '/Froala/css/third_party/font_awesome.min.css',
+
+      'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+    ), $css_options
+);
+```
 
 ## How to use the helper
 
