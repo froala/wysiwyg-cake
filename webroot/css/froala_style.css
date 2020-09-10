@@ -106,7 +106,7 @@
   .fr-view blockquote {
     border-left: solid 2px #5E35B1;
     margin-left: 0;
-    padding-left: 5px;
+    padding: 0 0 0 5px;
     color: #5E35B1; }
     .fr-view blockquote blockquote {
       border-color: #00BCD4;
@@ -358,3 +358,9 @@ span.fr-img-caption.fr-view {
       float: right;
       margin: 5px 0 5px 5px;
       max-width: calc(100% - 5px); }
+  .fr-help-modal th {
+    border-bottom: none!important;
+  }
+  .fr-view table tr th, .fr-view table tr td {
+    padding: 0!important;
+  }
