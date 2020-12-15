@@ -99,6 +99,8 @@ class FroalaHelper extends Helper
 			'/Froala/js/plugins/table.min.js',
 			'/Froala/js/plugins/url.min.js',
 			'/Froala/js/plugins/video.min.js',
+			'/Froala/js/plugins/markdown.min.js',
+			'/Froala/js/plugins/track_changes.min.js',
 			'/Froala/js/plugins/word_paste.min.js'
 			), $js_options);
 		echo $this->Html->css(array(
@@ -122,6 +124,7 @@ class FroalaHelper extends Helper
 				'/Froala/css/third_party/font_awesome.min.css',
 				'/Froala/css/plugins/table.min.css',
 				'/Froala/css/plugins/video.min.css',
+				'/Froala/css/plugins/markdown.min.css',
 				'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
 			), $css_options
 		);
