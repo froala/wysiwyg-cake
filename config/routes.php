@@ -1,9 +1,9 @@
 <?php
 use Cake\Routing\RouteBuilder;
-use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
-Router::plugin(
+/** @var \Cake\Routing\RouteBuilder $routes */
+$routes->plugin(
     'Froala',
     ['path' => '/froala'],
     function (RouteBuilder $routes) {
