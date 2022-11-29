@@ -6,5 +6,9 @@
         "dev": "1",
         "qa": "2",
         "qe": "2",
-        "stg": "1"
+        "stg": "1",  
+        "comment-3": "froala-editor-sdk - set the branchname of ruby sdk git repo",
+        "cake3_sdk_name": "wysiwyg-cake-mcs",
+        "cake3_sdk_repo": "https://github.com/froala/wysiwyg-cake-mcs.git",
+        "cake3_sdk_branch": "QA2911"
 }
