@@ -5,6 +5,8 @@
 
 > CakePHP Plugin for Froala Javascript WYSIWYG Text Editor. For CakePHP >=3.0.
 
+test build
+
 > See [froala/wysiwyg-cake2](https://github.com/froala/wysiwyg-cake2) for CakePHP version 2.
 
 ## About
