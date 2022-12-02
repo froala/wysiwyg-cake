@@ -11,11 +11,9 @@ branches:
     - /QA*/
     - /QE*/
     - /RC*/
-    - /Release-Master*/
-    
+    - /Release-Master*/    
 env:
 - SHORT_COMMIT= `git rev-parse --short=7 ${TRAVIS_COMMIT}`
-
 before_install:
   - echo $TRAVIS_BRANCH
   - echo $PWD
