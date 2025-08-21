@@ -1,9 +1,11 @@
-# Froala WYSIWYG Editor Plugin for CakePHP 3
+# Froala WYSIWYG Editor Plugin for CakePHP 4
 
 [![Packagist](https://img.shields.io/packagist/v/froala/wysiwyg-cake.svg)](https://packagist.org/packages/froala/wysiwyg-cake)
 [![Packagist](https://img.shields.io/packagist/dt/froala/wysiwyg-cake.svg)](https://packagist.org/packages/froala/wysiwyg-cake)
 
-> CakePHP Plugin for Froala Javascript WYSIWYG Text Editor. For CakePHP >=3.0.
+> CakePHP Plugin for Froala Javascript WYSIWYG Text Editor. For CakePHP >=4.0.
+
+> See [froala/wysiwyg-cake](https://github.com/froala/wysiwyg-cake) for CakePHP version 3.
 
 > See [froala/wysiwyg-cake2](https://github.com/froala/wysiwyg-cake2) for CakePHP version 2.
 
