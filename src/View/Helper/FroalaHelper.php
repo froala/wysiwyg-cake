@@ -19,7 +19,7 @@ class FroalaHelper extends Helper
 	public $helpers = array('Html');
 
 
-	public function initialize(array $config) {}
+	public function initialize(array $config): void {}
 
 	/**
 	 * Adds a new editor to the script block on the page
