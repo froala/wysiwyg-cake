@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Test suite bootstrap for Froala.
  *
@@ -21,4 +23,18 @@ $root = $findRoot(__FILE__);
 unset($findRoot);
 
 chdir($root);
-require $root . '/config/bootstrap.php';
+
+require_once $root . '/vendor/autoload.php';
+
+/**
+ * Define fallback values for required constants and configuration.
+ * To customize constants and configuration remove this require
+ * and define the data required by your plugin here.
+ */
+require_once $root . '/vendor/cakephp/cakephp/tests/bootstrap.php';
+
+if (file_exists($root . '/config/bootstrap.php')) {
+    require $root . '/config/bootstrap.php';
+
+    return;
+}
